@@ -131,19 +131,19 @@ function App() {
     },
   ];
 
-  console.log("Crafted By Prakaash Murugesan! ❤️ : (https://prakaash.netlify.app/)");
+  console.log("Crafted By Prakaash Murugesan! : (https://prakaash.netlify.app/)");
 
   return (
     <div className="min-h-screen bg-gray-50 p-7">
       <div className="max-w-7xl mx-auto">
-        <header className="mb-8">
+        <header className="mb-6">
           <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-2">
             <Contact className="w-8 h-8 text-indigo-600" />
             Attendance Tracker
           </h1>
           {/* 
-          <p className="text-gray-600 mt-2">Track your hybrid work schedule and attendance</p>
-          <p className="text-sm text-gray-500 mt-1">Single click to mark working day • Double click to mark holiday</p> 
+          <p className="text-gray-600 mt-2">Crafted By Prakaash Murugesan ❤️</p>
+          <p className="text-sm text-gray-500 mt-1">Single Click : Working Days • Double Click : Holidays</p> 
           */}
         </header>
 
