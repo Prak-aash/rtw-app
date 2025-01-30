@@ -13,13 +13,13 @@ import {
   isWeekend
 } from 'date-fns';
 import {
+  Contact,
   Calendar,
   Clock,
-  CircleUserRound,
-  ChevronLeft,
-  ChevronRight,
   Building,
-  Percent
+  Percent,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 function App() {
@@ -131,14 +131,14 @@ function App() {
     },
   ];
 
-  console.log("Crafted By Prakaash Murugesan! ❤️ : (https://prakaash.netlify.app/)");
+  console.log("Crafted By Prakaash Murugesan : (https://prakaash.netlify.app/)");
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="min-h-screen bg-gray-50 p-7">
       <div className="max-w-7xl mx-auto">
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-2">
-            <CircleUserRound className="w-8 h-8 text-indigo-600" />
+            <Contact className="w-8 h-8 text-indigo-600" />
             Attendance Tracker
           </h1>
           {/* 
@@ -208,20 +208,25 @@ function App() {
                   );
                 })}
               </div>
-
-              <div className="mt-4 flex gap-4 text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-green-100 border border-green-300 rounded"></div>
-                  <span>Working Day</span>
+              <div className="mt-4 flex items-center justify-between text-sm">
+                <div className="flex gap-4">
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-green-100 border border-green-300 rounded"></div>
+                    <span>Working Day</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-red-100 border border-red-300 rounded"></div>
+                    <span>Holiday</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-gray-100 border border-gray-300 rounded"></div>
+                    <span>Weekend</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-red-100 border border-red-300 rounded"></div>
-                  <span>Holiday</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-gray-100 border border-gray-300 rounded"></div>
-                  <span>Weekend</span>
-                </div>
+                <button onClick={() => setSelectedDates({ workingDays: new Set(), holidays: new Set() })}
+                  className="ml-auto px-3 py-2 text-gray-100 border border-red-300 text-sm rounded-md hover:bg-red-500">
+                  Clear Selection
+                </button>
               </div>
             </div>
           </div>
