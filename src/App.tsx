@@ -131,7 +131,7 @@ function App() {
     },
   ];
 
-  console.log("Crafted By Prakaash Murugesan : (https://prakaash.netlify.app/)");
+  console.log("Crafted By Prakaash Murugesan! ❤️ : (https://prakaash.netlify.app/)");
 
   return (
     <div className="min-h-screen bg-gray-50 p-7">
